@@ -12,15 +12,15 @@ const ProjectTimelineCard = props => {
   } = projectDetails
   return (
     <>
-      <img src={imageUrl} alt={projectTitle} />
+      <img src={imageUrl} alt="project" />
       <div>
         <h1>{projectTitle}</h1>
         <div>
           <AiFillCalendar />
-          <p>{duration}</p>
+          <p key="duration">{duration}</p>
         </div>
       </div>
-      <p>{description}</p>
+      <p key="description">{description}</p>
       <a href={projectUrl}>Visit</a>
     </>
   )
