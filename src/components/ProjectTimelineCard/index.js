@@ -3,6 +3,7 @@ import {AiFillCalendar} from 'react-icons/ai'
 
 const ProjectTimelineCard = props => {
   const {projectDetails} = props
+  console.log(projectDetails)
   const {
     imageUrl,
     projectTitle,
@@ -10,6 +11,7 @@ const ProjectTimelineCard = props => {
     duration,
     projectUrl,
   } = projectDetails
+
   return (
     <>
       <img src={imageUrl} alt="project" />

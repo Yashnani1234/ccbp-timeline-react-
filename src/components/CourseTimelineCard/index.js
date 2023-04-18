@@ -5,15 +5,20 @@ const CourseTimelineCard = props => {
   const {courseDetails} = props
   const {courseTitle, description, tagsList} = courseDetails
   console.log(courseDetails)
+
   return (
     <>
       <div>
         <h1>{courseTitle}</h1>
         <div>
           <AiFillClockCircle />
-          {tagsList.map(each => (
-            <p>{each}</p>
-          ))}
+          <ul>
+            {tagsList.map(each => (
+              <li key={each.id}>
+                <p>{each}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
       <p key="description">{description}</p>
